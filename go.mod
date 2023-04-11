@@ -1,4 +1,4 @@
-module github.com/FXMsTwKLbktr/JuhGn9d5PBgMerWRbcSPYxSf
+module github.com/FXMsTwKLbktra/JuhGn9d5PBgMerWRbcSPYxSf
 
 go 1.13
 
