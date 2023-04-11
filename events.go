@@ -2,6 +2,7 @@ package JuhGn9d5PBgMerWRbcSPYxSf
 
 import (
 	"encoding/json"
+	"github.com/json-iterator/go"
 )
 
 // This file contains all the possible structs that can be
@@ -245,6 +246,8 @@ type MessageCreate struct {
 
 // UnmarshalJSON is a helper function to unmarshal MessageCreate object.
 func (m *MessageCreate) UnmarshalJSON(b []byte) error {
+	var json = jsoniter.ConfigCompatibleWithStandardLibrary
+
 	return json.Unmarshal(b, &m.Message)
 }
 
@@ -257,6 +260,8 @@ type MessageUpdate struct {
 
 // UnmarshalJSON is a helper function to unmarshal MessageUpdate object.
 func (m *MessageUpdate) UnmarshalJSON(b []byte) error {
+	var json = jsoniter.ConfigCompatibleWithStandardLibrary
+
 	return json.Unmarshal(b, &m.Message)
 }
 
@@ -268,6 +273,8 @@ type MessageDelete struct {
 
 // UnmarshalJSON is a helper function to unmarshal MessageDelete object.
 func (m *MessageDelete) UnmarshalJSON(b []byte) error {
+	var json = jsoniter.ConfigCompatibleWithStandardLibrary
+
 	return json.Unmarshal(b, &m.Message)
 }
 
@@ -348,6 +355,8 @@ type InteractionCreate struct {
 
 // UnmarshalJSON is a helper function to unmarshal Interaction object.
 func (i *InteractionCreate) UnmarshalJSON(b []byte) error {
+	var json = jsoniter.ConfigCompatibleWithStandardLibrary
+	
 	return json.Unmarshal(b, &i.Interaction)
 }
 

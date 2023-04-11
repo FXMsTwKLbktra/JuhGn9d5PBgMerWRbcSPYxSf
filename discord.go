@@ -76,7 +76,7 @@ func New(token string) (s *Session, err error) {
 
 	s.Identify.Presence.Status = "unknown"
 	s.Identify.Presence.Since = 0
-	s.Identify.Presence.Activities = nil
+	// s.Identify.Presence.Activities = nil
 	s.Identify.Presence.Afk = false
 
 	// Default client state
