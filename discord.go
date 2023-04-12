@@ -70,17 +70,19 @@ func New(token string) (s *Session, err error) {
 	s.Identify.Properties.ReferringDomainCurrent = "discord.com"
 	s.Identify.Properties.ReleaseChannel = "stable"
 	s.Identify.Properties.ClientBuildNumber = 187836
+	s.Identify.Properties.ClientEventSource = nil
 	s.Identify.Properties.DesignID = 0
 
 	// Default presence
 
-	s.Identify.Presence.Status = "unknown"
+	s.Identify.Presence.Status = "online"
 	s.Identify.Presence.Since = 0
-	// s.Identify.Presence.Activities = nil
+	s.Identify.Presence.Activities = nil
 	s.Identify.Presence.Afk = false
 
 	// Default client state
 
+	//s.Identify.ClientState.GuildVersions = nil
 	s.Identify.ClientState.HighestLastMessageID = "0"
 	s.Identify.ClientState.ReadStateVersion = 0
 	s.Identify.ClientState.UserGuildSettingsVersion = -1

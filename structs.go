@@ -2030,7 +2030,7 @@ type Identify struct {
 	Properties     IdentifyProperties  `json:"properties"`
 	Capabilities   int                 `json:"capabilities"`
 	Compress       bool                `json:"compress"`
-	Presence       GatewayStatusUpdate `json:"presence"`
+	Presence       GatewayStatusUpdate `json:"presence,omitempty"`
 	ClientState    ClientState         `json:"client_state"`
 }
 
@@ -2050,10 +2050,13 @@ type IdentifyProperties struct {
 	ReferringDomainCurrent string      `json:"referring_domain_current"`
 	ReleaseChannel         string      `json:"release_channel"`
 	ClientBuildNumber      int         `json:"client_build_number"`
+	ClientEventSource      interface{} `json:"client_event_source"`
 	DesignID               int         `json:"design_id"`
 }
 
 type ClientState struct {
+	GuildVersions struct {
+	} `json:"guild_versions"`
 	HighestLastMessageID     string `json:"highest_last_message_id"`
 	ReadStateVersion         int    `json:"read_state_version"`
 	UserGuildSettingsVersion int    `json:"user_guild_settings_version"`
